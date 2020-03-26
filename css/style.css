@@ -3,7 +3,6 @@
   padding: 0;
   box-sizing: border-box;
 }
-
 body {
   background-color: black;
   height: 87vh;
@@ -30,14 +29,12 @@ body {
   transition: 1.5s;
   background-color: rgba(255, 86, 19, 0.075);
 }
-
 .container * {
   width: 2.5rem;
   height: 0.12rem;
   background-color: #9c9c9c;
   transition: 1.5s;
 }
-
 .container:hover {
   box-shadow: inset 0px 0px 10px 0px rgba(255, 86, 19, 0.555),
     0px 0px 20px 0px rgba(255, 86, 19, 0.555);
@@ -50,112 +47,129 @@ body {
   transition: 1.5;
   cursor: none;
 }
+.container:hover div {
+  background-color: rgba(255, 86, 19, 0.555);
+  width: 2rem;
+  height: 0.12rem;
+}
+/* First row of menus___________________________________________*/
 
 /* Container 1____________________________________________*/
-
 .container:hover .lineTop1 {
   transform: rotate(-45deg) translate(0rem, 0.5rem);
   box-shadow: 0 10px 2px 0 rgba(255, 86, 19, 0.555);
-  background-color: rgba(255, 86, 19, 0.3);
-  width: 2rem;
-  height: 0.12rem;
 }
 .container:hover .lineDown1 {
   transform: rotate(45deg) translate(-0.6rem, -0.3rem);
   box-shadow: 0 10px 2px 0 rgba(255, 86, 19, 0.555);
-  background-color: rgba(255, 86, 19, 0.3);
-  width: 2rem;
-  height: 0.12rem;
 }
 /* Container 2___________________________________________*/
 
 .container:hover .lineTop2 {
   transform: rotate(45deg) translate(0.5rem, -0.5rem);
   box-shadow: 0 10px rgba(255, 86, 19, 0.555);
-  background-color: rgba(255, 86, 19, 0.555);
-  width: 2rem;
-  height: 0.12rem;
 }
 .container:hover .lineDown2 {
   transform: rotate(-45deg) translate(0.2rem, -1.2rem);
   box-shadow: 0 10px rgba(255, 86, 19, 0.555);
-  background-color: rgba(255, 86, 19, 0.555);
-  width: 2rem;
-  height: 0.12rem;
 }
 /* Container 3 ___________________________________________*/
-
+.container.three:hover {
+  box-shadow: inset 0 0 0.36rem 0 rgba(243, 220, 211, 0.555),
+    inset 0 0 0.75rem 0 rgba(0, 0, 0, 0.9), 0 0 2rem 0 rgba(255, 86, 19, 0.555);
+}
 .container:hover .lineRight3 {
   transform: rotate(59deg) translate(0.9rem, 0);
-  background-color: rgba(255, 86, 19, 0.555);
-  width: 2rem;
-  height: 0.12rem;
 }
 .container:hover .lineDown3 {
   transform: rotate(-420deg) translate(-0.4rem, -0.4rem);
-  background-color: rgba(255, 86, 19, 0.555);
-  width: 2rem;
-  height: 0.12rem;
 }
 .container:hover .lineLeft3 {
   transform: rotate(0deg) translate(-0, 0.3rem);
-  background-color: rgba(255, 86, 19, 0.555);
-  width: 2rem;
-  height: 0.12rem;
 }
 
 /* Container 4_______________________________________________*/
 .container:hover .lineTop4 {
   transform: translatex(-6px);
   box-shadow: -6px 8px rgba(255, 86, 19, 0.555);
-  background-color: rgba(255, 86, 19, 0.555);
-  width: 2rem;
-  height: 0.12rem;
+
   margin-left: 1.5rem;
 }
 .container:hover .lineDown4 {
   transform: translate(-10px, 0px);
-  background-color: rgba(255, 86, 19, 0.555);
-  width: 2rem;
-  height: 0.12rem;
+
   margin-left: 0.5rem;
 }
 /* Container 5______________________________________________*/
 
-/* topright  */
+.container.four:hover div {
+  box-shadow: 0px 10px rgba(255, 86, 19, 0.555);
+}
 .container:hover .TopRight5 {
   transform: rotate(45deg) translate(0.5rem, -0.5rem);
-  box-shadow: 0px 10px rgba(255, 86, 19, 0.555);
-  background-color: rgba(255, 86, 19, 0.555);
-  width: 2rem;
-  height: 0.12rem;
 }
 
-/* topleft */
 .container:hover .bottomRight5 {
   transform: rotate(135deg) translate(0.1rem, 0.2rem);
-  box-shadow: 0px 10px rgba(255, 86, 19, 0.555);
-  background-color: rgba(255, 86, 19, 0.555);
-  width: 2rem;
-  height: 0.12rem;
 }
 
-/* bottom right  */
 .container:hover .bottomLeft5 {
   transform: rotate(315deg) translate(0.2rem, 0.1em);
-  box-shadow: 0px 10px rgba(255, 86, 19, 0.555);
-  background-color: rgba(255, 86, 19, 0.555);
-  width: 2rem;
-  height: 0.12rem;
 }
 
-/* buttomLeft */
 .container:hover .topLeft5 {
   transform: rotate(224deg) translate(0.6rem, -0.4rem);
-  box-shadow: 0px 10px rgba(255, 86, 19, 0.555);
-  background-color: rgba(255, 86, 19, 0.555);
-  width: 2rem;
-  height: 0.12rem;
+}
+
+/* Seconde row of menus ______________________________________ */
+
+/* container 1 _________________________________________________ */
+.container.first:hover {
+  transform: rotate(-90deg) scale(0.9);
+}
+.container.first:hover,
+.container.first:hover * {
+  box-shadow: inset 0 0 0.36rem 0 rgba(255, 201, 179, 0.555),
+    inset 0 0 0.75rem 0 rgba(0, 0, 0, 0.9),
+    inset 0 0 0.31rem 0 rgb(236, 180, 143),
+    0 0 1.25rem 0 rgba(255, 86, 19, 0.555);
+}
+.container:hover .sec-row-line-mid1 {
+  opacity: 0.3;
+  transform: translatex(0.5rem);
+}
+.container:hover .sec-row-line-top1,
+.container:hover .sec-row-line-down1 {
+  width: 1rem;
+  height: 1rem;
+  background-color: transparent;
+  border: 1px solid rgba(255, 86, 19, 0.74);
+  opacity: 0.7;
+}
+.container:hover .sec-row-line-top1 {
+  border-radius: 1% 90%;
+  transform: rotate(300deg);
+}
+.container:hover .sec-row-line-down1 {
+  border-radius: 90% 1%;
+  transform: rotate(-300deg);
+}
+
+/* container 2_________________________________________________ */
+.container.second:hover {
+  padding: 1.5rem;
+  background-color: rgba(255, 86, 19, 0.13);
+}
+.container.second:hover * {
+  width: 1rem;
+  height: 1rem;
+  background-color: transparent;
+  opacity: 0.7;
+  box-shadow: inset 0 0 0.36rem 0 rgba(255, 201, 179, 0.555),
+    inset 0 0 0.75rem 0 rgba(0, 0, 0, 0.9),
+    inset 0 0 0.31rem 0 rgb(236, 193, 165),
+    0 0 1.25rem 0 rgba(255, 86, 19, 0.555);
+  border-radius: 50%;
 }
 
 /* Name of designer___________________________________________*/
