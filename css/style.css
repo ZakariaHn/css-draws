@@ -12,8 +12,7 @@ body {
   display: flex;
   flex-flow: row;
   justify-content: space-evenly;
-  margin-top: 5rem;
-  background-color: rgba(255, 86, 19, 0.082);
+  margin-top: 2rem;
   height: 10rem;
   padding: 1.4rem;
 }
@@ -31,16 +30,6 @@ body {
   transition: 1.5s;
   background-color: rgba(255, 86, 19, 0.075);
 }
-.container:hover {
-  box-shadow: 0 2px 5px rgba(255, 86, 19, 0.555);
-  background: linear-gradient(
-    -90deg,
-    rgba(255, 86, 19, 0.048),
-    rgb(41, 41, 41)
-  );
-  transform: scale(0.9, 0.9);
-  cursor: none;
-}
 
 .container * {
   width: 2.5rem;
@@ -49,7 +38,128 @@ body {
   transition: 1.5s;
 }
 
-.logo {
+.container:hover {
+  box-shadow: inset 0px 0px 10px 0px rgba(255, 86, 19, 0.555),
+    0px 0px 20px 0px rgba(255, 86, 19, 0.555);
+  background: linear-gradient(
+    -90deg,
+    rgba(255, 86, 19, 0.048),
+    rgb(41, 41, 41)
+  );
+  transform: scale(0.9, 0.9);
+  transition: 1.5;
+  cursor: none;
+}
+
+/* Container 1____________________________________________*/
+
+.container:hover .lineTop1 {
+  transform: rotate(-45deg) translate(0rem, 0.5rem);
+  box-shadow: 0 10px 2px 0 rgba(255, 86, 19, 0.555);
+  background-color: rgba(255, 86, 19, 0.3);
+  width: 2rem;
+  height: 0.12rem;
+}
+.container:hover .lineDown1 {
+  transform: rotate(45deg) translate(-0.6rem, -0.3rem);
+  box-shadow: 0 10px 2px 0 rgba(255, 86, 19, 0.555);
+  background-color: rgba(255, 86, 19, 0.3);
+  width: 2rem;
+  height: 0.12rem;
+}
+/* Container 2___________________________________________*/
+
+.container:hover .lineTop2 {
+  transform: rotate(45deg) translate(0.5rem, -0.5rem);
+  box-shadow: 0 10px rgba(255, 86, 19, 0.555);
+  background-color: rgba(255, 86, 19, 0.555);
+  width: 2rem;
+  height: 0.12rem;
+}
+.container:hover .lineDown2 {
+  transform: rotate(-45deg) translate(0.2rem, -1.2rem);
+  box-shadow: 0 10px rgba(255, 86, 19, 0.555);
+  background-color: rgba(255, 86, 19, 0.555);
+  width: 2rem;
+  height: 0.12rem;
+}
+/* Container 3 ___________________________________________*/
+
+.container:hover .lineRight3 {
+  transform: rotate(59deg) translate(0.9rem, 0);
+  background-color: rgba(255, 86, 19, 0.555);
+  width: 2rem;
+  height: 0.12rem;
+}
+.container:hover .lineDown3 {
+  transform: rotate(-420deg) translate(-0.4rem, -0.4rem);
+  background-color: rgba(255, 86, 19, 0.555);
+  width: 2rem;
+  height: 0.12rem;
+}
+.container:hover .lineLeft3 {
+  transform: rotate(0deg) translate(-0, 0.3rem);
+  background-color: rgba(255, 86, 19, 0.555);
+  width: 2rem;
+  height: 0.12rem;
+}
+
+/* Container 4_______________________________________________*/
+.container:hover .lineTop4 {
+  transform: translatex(-6px);
+  box-shadow: -6px 8px rgba(255, 86, 19, 0.555);
+  background-color: rgba(255, 86, 19, 0.555);
+  width: 2rem;
+  height: 0.12rem;
+  margin-left: 1.5rem;
+}
+.container:hover .lineDown4 {
+  transform: translate(-10px, 0px);
+  background-color: rgba(255, 86, 19, 0.555);
+  width: 2rem;
+  height: 0.12rem;
+  margin-left: 0.5rem;
+}
+/* Container 5______________________________________________*/
+
+/* topright  */
+.container:hover .TopRight5 {
+  transform: rotate(45deg) translate(0.5rem, -0.5rem);
+  box-shadow: 0px 10px rgba(255, 86, 19, 0.555);
+  background-color: rgba(255, 86, 19, 0.555);
+  width: 2rem;
+  height: 0.12rem;
+}
+
+/* topleft */
+.container:hover .bottomRight5 {
+  transform: rotate(135deg) translate(0.1rem, 0.2rem);
+  box-shadow: 0px 10px rgba(255, 86, 19, 0.555);
+  background-color: rgba(255, 86, 19, 0.555);
+  width: 2rem;
+  height: 0.12rem;
+}
+
+/* bottom right  */
+.container:hover .bottomLeft5 {
+  transform: rotate(315deg) translate(0.2rem, 0.1em);
+  box-shadow: 0px 10px rgba(255, 86, 19, 0.555);
+  background-color: rgba(255, 86, 19, 0.555);
+  width: 2rem;
+  height: 0.12rem;
+}
+
+/* buttomLeft */
+.container:hover .topLeft5 {
+  transform: rotate(224deg) translate(0.6rem, -0.4rem);
+  box-shadow: 0px 10px rgba(255, 86, 19, 0.555);
+  background-color: rgba(255, 86, 19, 0.555);
+  width: 2rem;
+  height: 0.12rem;
+}
+
+/* Name of designer___________________________________________*/
+.designer {
   background-color: rgba(255, 86, 19, 0.082);
   color: rgba(255, 86, 19, 0.555);
   font-family: "Parisienne", cursive;
@@ -59,113 +169,4 @@ body {
 h2 {
   font-weight: lighter;
   text-align: center;
-}
-/* First container */
-.container:hover .lineTop {
-  transform: rotate(-45deg) translate(0rem, 0.5rem);
-  box-shadow: 0 10px 2px 0 rgba(255, 86, 19, 0.555);
-  background-color: rgba(255, 86, 19, 0.3);
-  width: 2rem;
-  height: 0.12rem;
-}
-.container:hover .lineDown {
-  transform: rotate(45deg) translate(-0.6rem, -0.3rem);
-  box-shadow: 0 10px 2px 0 rgba(255, 86, 19, 0.555);
-  background-color: rgba(255, 86, 19, 0.3);
-  width: 2rem;
-  height: 0.12rem;
-}
-/* second container  */
-.container:hover .lineRight2 {
-  transform: rotate(59deg) translate(0.9rem, 0);
-
-  background-color: rgba(255, 86, 19, 0.555);
-  width: 2rem;
-  height: 0.12rem;
-}
-.container:hover .lineDown2 {
-  transform: rotate(-420deg) translate(-0.4rem, -0.4rem);
-
-  background-color: rgba(255, 86, 19, 0.555);
-  width: 2rem;
-  height: 0.12rem;
-}
-.container:hover .lineLeft2 {
-  transform: rotate(0deg) translate(-0, 0.3rem);
-
-  background-color: rgba(255, 86, 19, 0.555);
-  width: 2rem;
-  height: 0.12rem;
-}
-.container:hover {
-  box-shadow: inset 0px 0px 10px 0px rgba(255, 86, 19, 0.555),
-    0px 0px 20px 0px rgba(255, 86, 19, 0.555);
-  transition: 1.5;
-}
-
-/* Third container  */
-.container:hover .lineTop3 {
-  transform: translatex(-6px);
-  box-shadow: -6px 8px rgba(255, 86, 19, 0.555);
-  background-color: rgba(255, 86, 19, 0.555);
-  width: 2rem;
-  height: 0.12rem;
-  margin-left: 1.5rem;
-}
-.container:hover .lineDown3 {
-  transform: translate(-10px, 0px);
-  background-color: rgba(255, 86, 19, 0.555);
-  width: 2rem;
-  height: 0.12rem;
-  margin-left: 0.5rem;
-}
-/* Third container 
-
-/* topright  */
-.container:hover .lineTop4 {
-  transform: rotate(45deg) translate(0.5rem, -0.5rem);
-  box-shadow: 0px 10px rgba(255, 86, 19, 0.555);
-  background-color: rgba(255, 86, 19, 0.555);
-  width: 2rem;
-  height: 0.12rem;
-}
-/* topleft */
-.container:hover .lineRight4 {
-  transform: rotate(135deg) translate(0.1rem, 0.2rem);
-  box-shadow: 0px 10px rgba(255, 86, 19, 0.555);
-  background-color: rgba(255, 86, 19, 0.555);
-  width: 2rem;
-  height: 0.12rem;
-}
-
-/* bottom right  */
-.container:hover .lineDown4 {
-  transform: rotate(315deg) translate(0.2rem, 0.1em);
-  box-shadow: 0px 10px rgba(255, 86, 19, 0.555);
-  background-color: rgba(255, 86, 19, 0.555);
-  width: 2rem;
-  height: 0.12rem;
-}
-/* buttomLeft */
-.container:hover .lineLeft4 {
-  transform: rotate(224deg) translate(0.6rem, -0.4rem);
-  box-shadow: 0px 10px rgba(255, 86, 19, 0.555);
-  background-color: rgba(255, 86, 19, 0.555);
-  width: 2rem;
-  height: 0.12rem;
-}
-/* fifthcontainer */
-.container:hover .lineTop5 {
-  transform: rotate(45deg) translate(0.5rem, -0.5rem);
-  box-shadow: 0 10px rgba(255, 86, 19, 0.555);
-  background-color: rgba(255, 86, 19, 0.555);
-  width: 2rem;
-  height: 0.12rem;
-}
-.container:hover .lineDown5 {
-  transform: rotate(-45deg) translate(0.2rem, -1.2rem);
-  box-shadow: 0 10px rgba(255, 86, 19, 0.555);
-  background-color: rgba(255, 86, 19, 0.555);
-  width: 2rem;
-  height: 0.12rem;
 }
