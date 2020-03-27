@@ -54,6 +54,82 @@ body {
   width: 2rem;
   height: 0.12rem;
 }
+/* Animating balck hole__________________________________________*/
+.firstPage {
+  height: 50%;
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.containerbig {
+  position: absolute;
+  filter: blur(5px) brightness(2);
+  animation: leftright 100s linear infinite;
+}
+
+@keyframes leftright {
+  0% {
+    transform: translateX(-60rem);
+  }
+  100% {
+    transform: translateX(40rem);
+  }
+}
+
+@keyframes animate {
+  0% {
+    background-position: 0%;
+  }
+  50% {
+    background-position: 400%;
+  }
+
+  100% {
+    background-position: 100%;
+  }
+}
+.containerbig .biglinetop4,
+.containerbig .biglinedown4 {
+  width: 2rem;
+  height: 2rem;
+  background: transparent;
+
+  border-radius: 50%;
+}
+.containerbig .biglinetop4 {
+  animation: rotateright 20s linear infinite;
+  box-shadow: 0 0 1rem 0 rgba(255, 86, 19, 0.555),
+    0 0 0.2rem 0 rgba(235, 145, 110, 0.555),
+    inset 0 0 0.21rem 0 rgba(0, 0, 0, 0.377),
+    inset 0 0 0.36rem 0 rgba(149, 235, 143, 0.308);
+}
+
+.containerbig .biglinedown4 {
+  animation: rotateleft 20s linear infinite;
+  margin-top: -2.1rem;
+  box-shadow: 0 0 1rem 0 rgba(255, 86, 19, 0.555),
+    0 0 0.2rem 0 rgba(235, 145, 110, 0.555),
+    inset 0 0 0.36rem 0 rgba(113, 121, 7, 0.466),
+    inset 0 0 0.21rem 0 rgba(0, 0, 0, 0.356), inset 0 0 0.3rem 0 firebrick;
+}
+@keyframes rotateright {
+  0% {
+    transform: scale(0) rotatez(360deg);
+  }
+  100% {
+    transform: scale(7);
+  }
+}
+@keyframes rotateleft {
+  0% {
+    transform: scale(7) rotatez(-360deg);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
 
 /* First row of menus___________________________________________*/
 
@@ -265,12 +341,18 @@ body {
 }
 @keyframes rotate {
   0% {
-    transform: rotatez(360deg);
+    transform: scale(0) rotatez(360deg);
+  }
+  100% {
+    transform: scale(1.6);
   }
 }
 @keyframes reversRotate {
   0% {
-    transform: rotatez(-360deg);
+    transform: scale(1.6) rotatez(-360deg);
+  }
+  100% {
+    transform: scale(0);
   }
 }
 
