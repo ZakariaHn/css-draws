@@ -18,6 +18,13 @@ body {
 
   height: 10rem;
 }
+.container div {
+  background-color: transparent;
+  box-shadow: 0 0 1rem 0 rgba(255, 86, 19, 0.555),
+    0 0 0.2rem 0 rgba(235, 145, 110, 0.555),
+    inset 0 0 0.21rem 0 rgba(0, 0, 0, 0.377),
+    inset 0 0 0.36rem 0 rgba(149, 235, 143, 0.308);
+}
 .container {
   height: 7rem;
   width: 7rem;
@@ -50,6 +57,7 @@ body {
   transition: 1.5;
   cursor: none;
 }
+
 .container:hover div {
   background-color: rgba(255, 86, 19, 0.555);
   width: 2rem;
@@ -184,7 +192,8 @@ body {
 }
 .container:hover .lineDown4 {
   transform: translate(-10px, 0px);
-
+  background-color: rgba(255, 86, 19, 0.555);
+  box-shadow: none;
   margin-left: 0.5rem;
 }
 /* Container 5__________________________________________________*/
@@ -355,6 +364,39 @@ body {
   100% {
     transform: scale(0);
   }
+}
+
+/* Conatainer 5________________________________________________ */
+
+.container.fifth .hidden {
+  opacity: 1;
+}
+.container.fifth:hover div {
+  width: 2rem;
+  height: 2rem;
+  background: transparent;
+  border: 1px solid rgba(255, 86, 19, 0.507);
+  border-radius: 1% 90%;
+  transform: rotate(45deg);
+  box-shadow: inset 0 0 0.36rem 0 rgba(149, 235, 143, 0.308),
+    inset 0 0 0.75rem 0 rgba(0, 0, 0, 0.9),
+    0 0 1.25rem 0 rgba(255, 86, 19, 0.555);
+
+  margin-top: -2rem;
+  animation: rotatefifth 1s linear infinite;
+}
+.container.fifth:hover {
+  box-shadow: inset 0 0 0.36rem 0 rgba(149, 235, 143, 0.308),
+    inset 0 0 0.75rem 0 rgba(0, 0, 0, 0.9),
+    0 0 1.25rem 0 rgba(255, 86, 19, 0.555);
+}
+@keyframes rotatefifth {
+  50% {
+    transform: rotatez(9000deg);
+  }
+}
+.container.fifth:hover .hidden {
+  opacity: 0;
 }
 
 /* Name of designer_____________________________________________*/
