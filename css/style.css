@@ -7,6 +7,8 @@ body {
   background-color: black;
   height: 87vh;
 }
+/* Shared setup for all containers_______________________________*/
+
 .mainContainer {
   display: flex;
   flex-flow: row;
@@ -54,7 +56,8 @@ body {
 }
 /* First row of menus___________________________________________*/
 
-/* Container 1____________________________________________*/
+/* Container 1__________________________________________________*/
+
 .container:hover .lineTop1 {
   transform: rotate(-45deg) translate(0rem, 0.5rem);
   box-shadow: 0 10px 2px 0 rgba(255, 86, 19, 0.555);
@@ -63,7 +66,7 @@ body {
   transform: rotate(45deg) translate(-0.6rem, -0.3rem);
   box-shadow: 0 10px 2px 0 rgba(255, 86, 19, 0.555);
 }
-/* Container 2___________________________________________*/
+/* Container 2__________________________________________________*/
 
 .container:hover .lineTop2 {
   transform: rotate(45deg) translate(0.5rem, -0.5rem);
@@ -73,7 +76,7 @@ body {
   transform: rotate(-45deg) translate(0.2rem, -1.2rem);
   box-shadow: 0 10px rgba(255, 86, 19, 0.555);
 }
-/* Container 3 ___________________________________________*/
+/* Container 3__________________________________________________*/
 .container.three:hover {
   box-shadow: inset 0 0 0.36rem 0 rgba(243, 220, 211, 0.555),
     inset 0 0 0.75rem 0 rgba(0, 0, 0, 0.9), 0 0 2rem 0 rgba(255, 86, 19, 0.555);
@@ -88,7 +91,7 @@ body {
   transform: rotate(0deg) translate(-0, 0.3rem);
 }
 
-/* Container 4_______________________________________________*/
+/* Container 4__________________________________________________*/
 .container:hover .lineTop4 {
   transform: translatex(-6px);
   box-shadow: -6px 8px rgba(255, 86, 19, 0.555);
@@ -100,43 +103,35 @@ body {
 
   margin-left: 0.5rem;
 }
-/* Container 5______________________________________________*/
+/* Container 5__________________________________________________*/
 
-.container.four:hover div {
+.container.five:hover div {
   box-shadow: 0px 10px rgba(255, 86, 19, 0.555);
 }
 .container:hover .TopRight5 {
   transform: rotate(45deg) translate(0.5rem, -0.5rem);
 }
-
 .container:hover .bottomRight5 {
   transform: rotate(135deg) translate(0.1rem, 0.2rem);
 }
-
 .container:hover .bottomLeft5 {
   transform: rotate(315deg) translate(0.2rem, 0.1em);
 }
-
 .container:hover .topLeft5 {
   transform: rotate(224deg) translate(0.6rem, -0.4rem);
 }
 
-/* Seconde row of menus ______________________________________ */
+/* Seconde row of menus_________________________________________*/
 
-/* container 1 _________________________________________________ */
+/* container 1__________________________________________________*/
 .container.first:hover {
   transform: rotate(-90deg) scale(0.9);
 }
 .container.first:hover,
 .container.first:hover * {
-  box-shadow: inset 0 0 0.36rem 0 rgba(255, 201, 179, 0.555),
+  box-shadow: inset 0 0 0.36rem 0 rgba(149, 235, 143, 0.308),
     inset 0 0 0.75rem 0 rgba(0, 0, 0, 0.9),
-    inset 0 0 0.31rem 0 rgb(236, 180, 143),
     0 0 1.25rem 0 rgba(255, 86, 19, 0.555);
-}
-.container:hover .sec-row-line-mid1 {
-  opacity: 0.3;
-  transform: translatex(0.5rem);
 }
 .container:hover .sec-row-line-top1,
 .container:hover .sec-row-line-down1 {
@@ -150,12 +145,16 @@ body {
   border-radius: 1% 90%;
   transform: rotate(300deg);
 }
+.container:hover .sec-row-line-mid1 {
+  opacity: 0.3;
+  transform: translatex(0.5rem);
+}
 .container:hover .sec-row-line-down1 {
   border-radius: 90% 1%;
   transform: rotate(-300deg);
 }
 
-/* container 2_________________________________________________ */
+/* container 2__________________________________________________*/
 .container.second:hover {
   padding: 1.5rem;
   background-color: rgba(255, 86, 19, 0.13);
@@ -171,16 +170,37 @@ body {
     0 0 1.25rem 0 rgba(255, 86, 19, 0.555);
   border-radius: 50%;
 }
+/* Container 3__________________________________________________*/
+.container.third:hover {
+  box-shadow: inset 0 0 0.36rem 0 rgba(149, 235, 143, 0.308),
+    inset 0 0 0.75rem 0 rgba(0, 0, 0, 0.9), 0 0 2rem 0 rgba(255, 86, 19, 0.555);
+}
+.container.third:hover * {
+  box-shadow: inset 0 0 0.36rem 0 rgba(255, 86, 19, 0.555),
+    inset 0 0 0.75rem 0 rgba(0, 0, 0, 0.9), 0 0 2rem 0 rgba(255, 86, 19, 0.555);
+}
 
-/* Name of designer___________________________________________*/
+.container:hover .sec-row-line-top3 {
+  width: 3rem;
+}
+.container:hover .sec-row-line-mid3 {
+  box-shadow: inset 0 0 0.36rem 0 rgba(149, 235, 143, 0.308),
+    inset 0 0 0.75rem 0 rgba(0, 0, 0, 0.9), 0 0 2rem 0 rgba(255, 86, 19, 0.555);
+}
+.container:hover .sec-row-line-bottom3 {
+  width: 0.8rem;
+}
+
+/* Name of designer_____________________________________________*/
 .designer {
-  background-color: rgba(255, 86, 19, 0.082);
+  background-color: transparent;
   color: rgba(255, 86, 19, 0.555);
   font-family: "Parisienne", cursive;
   padding-top: 0.2rem;
-  transform: translatey(44.5rem);
+  transform: translate(-30rem, 30rem);
 }
 h2 {
   font-weight: lighter;
   text-align: center;
+  text-shadow: 0 0 1.5rem rgb(245, 169, 139);
 }
