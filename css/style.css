@@ -11,10 +11,6 @@ body {
 }
 /* moving planets______*/
 
-.container.firstpage div,
-.container.firstpage {
-  animation: spinfirstpage 100s linear infinite;
-}
 .container.firstpage {
   width: 10rem;
   height: 10rem;
@@ -62,6 +58,7 @@ body {
     inset 0 0.5rem 2rem 0rem rgba(124, 161, 192, 0.9),
     0 0 1.25rem 0 rgba(10, 53, 53, 0.459), 0 0 1rem 0 rgba(216, 157, 133, 0.555),
     0 0 1rem 0 rgba(186, 219, 110, 0.555);
+  animation: spinfirstpage 10s linear infinite;
 }
 .container.firstpage .moon.firstpage {
   width: 1.5rem;
@@ -83,6 +80,7 @@ body {
   background: transparent;
   box-shadow: none;
   border-radius: 50%;
+  animation: spinfirstpage 100s linear infinite;
 }
 @keyframes spinfirstpage {
   0% {
@@ -468,6 +466,11 @@ body {
   box-shadow: inset 0 0 0.36rem 0 rgba(149, 235, 143, 0.308),
     inset 0 0 0.75rem 0 rgba(0, 0, 0, 0.9),
     0 0 1.25rem 0 rgba(255, 86, 19, 0.555);
+}
+@keyframes rotatefifth {
+  50% {
+    transform: rotatez(90000deg);
+  }
 }
 @keyframes rotatefifth {
   50% {
