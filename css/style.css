@@ -3,9 +3,137 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
-  background-color: black;
+  background: black;
   height: 100vh;
+  position: relative;
+}
+/* moving planets______*/
+.sun {
+  width: 20rem;
+  height: 50%;
+  background-size: contain;
+  border-radius: 50%;
+}
+
+.container.firstpage div,
+.container.firstpage {
+  animation: spinfirstpage 100s linear infinite;
+}
+.container.firstpage {
+  width: 10rem;
+  height: 10rem;
+
+  background: linear-gradient(
+    -45deg,
+    rgba(207, 121, 50, 0.63),
+    rgba(196, 194, 95, 0.863),
+    rgba(224, 140, 71, 0.74),
+    rgba(196, 194, 95, 0.863),
+    rgba(199, 116, 68, 0.774),
+    rgba(196, 194, 95, 0.863),
+    white
+  );
+
+  box-shadow: inset 0 0rem 2rem 0.5rem rgba(199, 81, 52, 0.295),
+    inset 0rem 0rem 2rem 0rem rgba(228, 115, 50, 0.555),
+    0 0rem 2rem 0.5rem rgba(199, 81, 52, 0.295),
+    0rem 0rem 2rem 0rem rgba(228, 115, 50, 0.555);
+  background-size: 400% 400%;
+  animation: changesun 10s ease-in-out infinite;
+}
+
+@keyframes changesun {
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
+}
+
+.container.firstpage .earth.firstpage {
+  width: 4rem;
+  height: 4rem;
+  background: transparent;
+  padding: 0;
+  border-radius: 50%;
+  box-shadow: inset 0 0.3rem 0.5rem 0 rgba(212, 120, 84, 0.295),
+    inset 0 0 1rem 0.3rem rgba(36, 116, 46, 0.658),
+    inset 0 0.5rem 3rem 0rem rgba(182, 128, 48, 0.644),
+    inset 0 0.5rem 2rem 0rem rgba(124, 161, 192, 0.9),
+    0 0 1.25rem 0 rgba(10, 53, 53, 0.459), 0 0 1rem 0 rgba(216, 157, 133, 0.555),
+    0 0 1rem 0 rgba(186, 219, 110, 0.555);
+}
+.container.firstpage .moon.firstpage {
+  width: 1.5rem;
+  height: 1.5rem;
+  background: black;
+  padding: 0;
+  margin: 6rem;
+  border-radius: 50%;
+  box-shadow: inset 0 0.4rem 0.5rem 0 rgba(134, 128, 56, 0.753),
+    inset 0.1rem 0.9rem 0.6rem 0 rgba(146, 136, 42, 0.829),
+    0 0 1.25rem 0 rgba(54, 53, 48, 0.555), 0 0 1rem 0 rgba(216, 157, 133, 0.555),
+    0 0 1rem 0 rgba(186, 219, 110, 0.555);
+}
+
+.container.firstpage .earthholder.firstpage {
+  width: 30rem;
+  height: 25rem;
+  border: none;
+  background: transparent;
+  box-shadow: none;
+  border-radius: 50%;
+}
+@keyframes spinfirstpage {
+  0% {
+    transform: rotate(360deg);
+  }
+}
+.containerbig .biglinetop4,
+.containerbig .biglinedown4 {
+  width: 2rem;
+  height: 2rem;
+  background: transparent;
+
+  border-radius: 50%;
+}
+.containerbig .biglinetop4 {
+  animation: rotateright 20s linear infinite;
+  box-shadow: 0 0 1rem 0 rgba(255, 86, 19, 0.555),
+    0 0 0.2rem 0 rgba(235, 145, 110, 0.555),
+    inset 0 0 0.21rem 0 rgba(0, 0, 0, 0.377),
+    inset 0 0 0.36rem 0 rgba(149, 235, 143, 0.308);
+}
+
+.containerbig .biglinedown4 {
+  animation: rotateleft 20s linear infinite;
+  margin-top: -2.1rem;
+  box-shadow: 0 0 1rem 0 rgba(255, 86, 19, 0.555),
+    0 0 0.2rem 0 rgba(235, 145, 110, 0.555),
+    inset 0 0 0.36rem 0 rgba(113, 121, 7, 0.466),
+    inset 0 0 0.21rem 0 rgba(0, 0, 0, 0.356), inset 0 0 0.3rem 0 firebrick;
+}
+@keyframes rotateright {
+  0% {
+    transform: scale(0) rotatez(360deg);
+  }
+  100% {
+    transform: scale(7);
+  }
+}
+@keyframes rotateleft {
+  0% {
+    transform: scale(7) rotatez(-360deg);
+  }
+  100% {
+    transform: scale(0);
+  }
 }
 /* Shared setup for all containers_______________________________*/
 .all {
@@ -65,15 +193,14 @@ body {
 }
 /* Animating balck hole__________________________________________*/
 .firstPage {
-  height: 40%;
+  height: 60%;
   width: 100%;
   position: relative;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
 }
 .containerbig {
-  position: absolute;
   filter: blur(5px) brightness(2);
   animation: leftright 100s linear infinite;
 }
@@ -81,9 +208,6 @@ body {
 @keyframes leftright {
   0% {
     transform: translateX(-60rem);
-  }
-  100% {
-    transform: translateX(40rem);
   }
 }
 
@@ -97,46 +221,6 @@ body {
 
   100% {
     background-position: 100%;
-  }
-}
-.containerbig .biglinetop4,
-.containerbig .biglinedown4 {
-  width: 2rem;
-  height: 2rem;
-  background: transparent;
-
-  border-radius: 50%;
-}
-.containerbig .biglinetop4 {
-  animation: rotateright 20s linear infinite;
-  box-shadow: 0 0 1rem 0 rgba(255, 86, 19, 0.555),
-    0 0 0.2rem 0 rgba(235, 145, 110, 0.555),
-    inset 0 0 0.21rem 0 rgba(0, 0, 0, 0.377),
-    inset 0 0 0.36rem 0 rgba(149, 235, 143, 0.308);
-}
-
-.containerbig .biglinedown4 {
-  animation: rotateleft 20s linear infinite;
-  margin-top: -2.1rem;
-  box-shadow: 0 0 1rem 0 rgba(255, 86, 19, 0.555),
-    0 0 0.2rem 0 rgba(235, 145, 110, 0.555),
-    inset 0 0 0.36rem 0 rgba(113, 121, 7, 0.466),
-    inset 0 0 0.21rem 0 rgba(0, 0, 0, 0.356), inset 0 0 0.3rem 0 firebrick;
-}
-@keyframes rotateright {
-  0% {
-    transform: scale(0) rotatez(360deg);
-  }
-  100% {
-    transform: scale(7);
-  }
-}
-@keyframes rotateleft {
-  0% {
-    transform: scale(7) rotatez(-360deg);
-  }
-  100% {
-    transform: scale(0);
   }
 }
 
@@ -399,7 +483,7 @@ body {
   opacity: 0;
 }
 
-/* Seconde row of menus_________________________________________*/
+/* Third row of menus_________________________________________*/
 /* container 1__________________________________________________*/
 .container.thefirst .hidden {
   opacity: 0;
@@ -420,7 +504,7 @@ body {
 /* container 2______________________________________________ */
 .container.thesecond:hover {
   background-color: transparent;
-  border: 1px solid rgba(255, 86, 19, 0.74);
+
   opacity: 0.7;
   background: black;
   transform: rotate(1deg);
@@ -434,7 +518,7 @@ body {
   background: black;
   padding: 0;
   border-radius: 50%;
-
+  animation: spin 10s linear infinite;
   box-shadow: inset 0 0.4rem 0.5rem 0 rgba(66, 158, 59, 0.63),
     inset 0.1rem 0.4rem 0.6rem 0 rgba(90, 199, 199, 0.726),
     0 0 1.25rem 0 rgba(255, 86, 19, 0.555),
@@ -462,40 +546,71 @@ body {
   background: black;
   padding: 0;
   animation: spin2 20s linear infinite;
-  box-shadow: inset 0.2rem 0.3rem 1.2rem rgba(177, 108, 62, 0.39),
-    inset 0.2rem 1rem 1.8rem 1.6rem rgba(136, 118, 68, 0.596),
-    inset 0.5rem 1rem 1.8rem rgba(124, 97, 56, 0.534);
-}
-.container.thethird:hover .little {
-  width: 1.5rem;
-  height: 1.5rem;
-
-  background: black;
-  padding: 0;
-  border-radius: 50%;
-
   box-shadow: inset 0 0 0.5rem 0 rgba(128, 238, 120, 0.534),
     inset 0 0 1rem 0 rgba(0, 0, 0, 0.9), 0 0 1.25rem 0 rgba(255, 86, 19, 0.555),
     0 0 1rem 0 rgba(216, 157, 133, 0.555), 0 0 1rem 0 rgba(186, 219, 110, 0.555);
 }
-.container.thethird:hover div {
-  width: 18rem;
-  height: 18rem;
+.container.thethird:hover .earth {
+  width: 4rem;
+  height: 4rem;
+  background: transparent;
+  padding: 0;
+  z-index: 1;
+  animation: spin3 20s linear infinite;
+  border-radius: 50%;
+}
+.container.thethird:hover .moon {
+  width: 1.5rem;
+  height: 1.5rem;
+  background: black;
+  padding: 0;
+
+  border-radius: 50%;
+  animation: spin3 20s linear infinite;
+}
+
+@keyframes spin3 {
+  0% {
+    transform: rotate(360deg);
+  }
+}
+
+/* container 4______________________________________________ */
+.container.theforth:hover {
+  background-color: transparent;
+  /* border: 1px solid rgba(255, 86, 19, 0.74); */
+  border: none;
+  opacity: 0.7;
+  background: black;
+  transform: rotate(1deg);
+  padding: 0;
+  animation: spin4 1s linear infinite;
+}
+.container.theforth:hover .little {
+  width: 0.3rem;
+  height: 0.3rem;
+  opacity: 0.8;
+  padding: 0;
+  border-radius: 50%;
+  animation: spin4 1s linear infinite;
+  box-shadow: inset 0 0.4rem 0.5rem 0 rgba(66, 158, 59, 0.63),
+    inset 0.1rem 0.4rem 0.6rem 0 rgba(90, 199, 199, 0.726),
+    0 0 1.25rem 0 rgba(255, 86, 19, 0.555),
+    0 0 1rem 0 rgba(216, 157, 133, 0.555), 0 0 1rem 0 rgba(186, 219, 110, 0.555);
+}
+.container.theforth:hover div {
+  width: 4.9rem;
+  height: 4.9rem;
   border: none;
   box-shadow: none;
   background: transparent;
+
   border-radius: 50%;
-  animation: spin2 20s linear infinite;
 }
-.process {
-  color: rgba(218, 198, 190, 0.89);
-  font-family: "Parisienne", cursive;
-  font-size: 2rem;
-  margin-bottom: 6rem;
-  opacity: 0;
-}
-.container.thethird:hover .process {
-  opacity: 1;
+@keyframes spin4 {
+  100% {
+    transform: rotate(9000deg);
+  }
 }
 /* Name of designer_____________________________________________*/
 .designer {
