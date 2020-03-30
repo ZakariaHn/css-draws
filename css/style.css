@@ -10,12 +10,6 @@ body {
   position: relative;
 }
 /* moving planets______*/
-.sun {
-  width: 20rem;
-  height: 50%;
-  background-size: contain;
-  border-radius: 50%;
-}
 
 .container.firstpage div,
 .container.firstpage {
@@ -24,7 +18,7 @@ body {
 .container.firstpage {
   width: 10rem;
   height: 10rem;
-
+  margin: -4rem 0 0 -8rem;
   background: linear-gradient(
     -45deg,
     rgba(207, 121, 50, 0.63),
@@ -39,14 +33,14 @@ body {
   box-shadow: inset 0 0rem 2rem 0.5rem rgba(199, 81, 52, 0.295),
     inset 0rem 0rem 2rem 0rem rgba(228, 115, 50, 0.555),
     0 0rem 2rem 0.5rem rgba(199, 81, 52, 0.295),
-    0rem 0rem 2rem 0rem rgba(228, 115, 50, 0.555);
+    0rem 0rem 4rem 0rem rgba(228, 115, 50, 0.555);
   background-size: 400% 400%;
-  animation: changesun 10s ease-in-out infinite;
+  animation: changesun 40s ease-in-out infinite;
 }
 
 @keyframes changesun {
   0% {
-    background-position: 0 50%;
+    background-position: 50%;
   }
   50% {
     background-position: 100 50%;
@@ -95,6 +89,27 @@ body {
     transform: rotate(360deg);
   }
 }
+
+/* Animating balck hole__________________________________________*/
+.firstPage {
+  height: 60%;
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.containerbig {
+  filter: blur(5px) brightness(2);
+  animation: leftright 100s linear infinite;
+}
+
+/* @keyframes leftright {
+  0% {
+    transform: translateX(-60rem);
+  }
+} */
+
 .containerbig .biglinetop4,
 .containerbig .biglinedown4 {
   width: 2rem;
@@ -133,6 +148,18 @@ body {
   }
   100% {
     transform: scale(0);
+  }
+}
+@keyframes animate {
+  0% {
+    background-position: 0%;
+  }
+  50% {
+    background-position: 400%;
+  }
+
+  100% {
+    background-position: 100%;
   }
 }
 /* Shared setup for all containers_______________________________*/
@@ -190,38 +217,6 @@ body {
   background-color: rgba(255, 86, 19, 0.555);
   width: 2rem;
   height: 0.12rem;
-}
-/* Animating balck hole__________________________________________*/
-.firstPage {
-  height: 60%;
-  width: 100%;
-  position: relative;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-.containerbig {
-  filter: blur(5px) brightness(2);
-  animation: leftright 100s linear infinite;
-}
-
-@keyframes leftright {
-  0% {
-    transform: translateX(-60rem);
-  }
-}
-
-@keyframes animate {
-  0% {
-    background-position: 0%;
-  }
-  50% {
-    background-position: 400%;
-  }
-
-  100% {
-    background-position: 100%;
-  }
 }
 
 /* First row of menus___________________________________________*/
