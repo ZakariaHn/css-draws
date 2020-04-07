@@ -9,12 +9,17 @@ body {
   height: 100vh;
   position: relative;
 }
-/* moving planets______*/
+
+/* ======================== moving planets ===================*/
 
 .container.firstpage {
   width: 10rem;
   height: 10rem;
   margin: -4rem 0 0 -8rem;
+  box-shadow: inset 0 0rem 2rem 0.5rem rgba(199, 81, 52, 0.295),
+    inset 0rem 0rem 2rem 0rem rgba(228, 115, 50, 0.555),
+    0 0rem 2rem 0.5rem rgba(199, 81, 52, 0.295),
+    0rem 0rem 4rem 0rem rgba(228, 115, 50, 0.555);
   background: linear-gradient(
     -45deg,
     rgba(207, 121, 50, 0.63),
@@ -25,11 +30,6 @@ body {
     rgba(196, 194, 95, 0.863),
     white
   );
-
-  box-shadow: inset 0 0rem 2rem 0.5rem rgba(199, 81, 52, 0.295),
-    inset 0rem 0rem 2rem 0rem rgba(228, 115, 50, 0.555),
-    0 0rem 2rem 0.5rem rgba(199, 81, 52, 0.295),
-    0rem 0rem 4rem 0rem rgba(228, 115, 50, 0.555);
   background-size: 400% 400%;
   animation: changesun 40s ease-in-out infinite;
 }
@@ -60,6 +60,7 @@ body {
     0 0 1rem 0 rgba(186, 219, 110, 0.555);
   animation: spinfirstpage 10s linear infinite;
 }
+
 .container.firstpage .moon.firstpage {
   width: 1.5rem;
   height: 1.5rem;
@@ -82,18 +83,21 @@ body {
   border-radius: 50%;
   animation: rotateearth 100s linear infinite;
 }
+
 @keyframes rotateearth {
   0% {
     transform: rotate(-360deg);
   }
 }
+
 @keyframes spinfirstpage {
   0% {
     transform: rotate(360deg);
   }
 }
 
-/* Animating balck hole__________________________________________*/
+/*=================== Animating balck hole ===================*/
+
 .firstPage {
   height: 60%;
   width: 100%;
@@ -102,6 +106,7 @@ body {
   justify-content: space-around;
   align-items: center;
 }
+
 .containerbig {
   filter: blur(5px) brightness(2);
   animation: leftright 100s linear infinite;
@@ -118,9 +123,9 @@ body {
   width: 2rem;
   height: 2rem;
   background: transparent;
-
   border-radius: 50%;
 }
+
 .containerbig .biglinetop4 {
   animation: rotateright 20s linear infinite;
   box-shadow: 0 0 1rem 0 rgba(255, 86, 19, 0.555),
@@ -137,6 +142,7 @@ body {
     inset 0 0 0.36rem 0 rgba(113, 121, 7, 0.466),
     inset 0 0 0.21rem 0 rgba(0, 0, 0, 0.356), inset 0 0 0.3rem 0 firebrick;
 }
+
 @keyframes rotateright {
   0% {
     transform: scale(0) rotatez(360deg);
@@ -145,6 +151,7 @@ body {
     transform: scale(7);
   }
 }
+
 @keyframes rotateleft {
   0% {
     transform: scale(7) rotatez(-360deg);
@@ -153,6 +160,7 @@ body {
     transform: scale(0);
   }
 }
+
 @keyframes animate {
   0% {
     background-position: 0%;
@@ -165,17 +173,20 @@ body {
     background-position: 100%;
   }
 }
-/* Shared setup for all containers_______________________________*/
+
+/*=============== Shared setup for all containers ===========*/
+
 .all {
   height: 100%;
 }
+
 .mainContainer {
   display: flex;
   flex-flow: row;
   justify-content: space-evenly;
-
   height: 10rem;
 }
+
 .container div {
   background-color: transparent;
   box-shadow: 0 0 1rem 0 rgba(255, 86, 19, 0.555),
@@ -183,6 +194,7 @@ body {
     inset 0 0 0.21rem 0 rgba(0, 0, 0, 0.377),
     inset 0 0 0.36rem 0 rgba(149, 235, 143, 0.308);
 }
+
 .container {
   height: 7rem;
   width: 7rem;
@@ -197,13 +209,18 @@ body {
   transition: 1.5s;
   background-color: rgba(255, 86, 19, 0.075);
 }
+
 .container * {
   width: 2.5rem;
   height: 0.12rem;
   background-color: #9c9c9c;
   transition: 1.5s;
 }
+
 .container:hover {
+  cursor: none;
+  transition: 1.5;
+  transform: scale(0.9, 0.9);
   box-shadow: inset 0px 0px 10px 0px rgba(255, 86, 19, 0.555),
     0px 0px 20px 0px rgba(255, 86, 19, 0.555);
   background: linear-gradient(
@@ -211,9 +228,6 @@ body {
     rgba(255, 86, 19, 0.048),
     rgb(41, 41, 41)
   );
-  transform: scale(0.9, 0.9);
-  transition: 1.5;
-  cursor: none;
 }
 
 .container:hover div {
@@ -222,9 +236,9 @@ body {
   height: 0.12rem;
 }
 
-/* First row of menus___________________________________________*/
+/*==================== First row of menus ===================*/
 
-/* Container 1__________________________________________________*/
+/*______________________Container 1_________________________ */
 
 .container:hover .lineTop1 {
   transform: rotate(-45deg) translate(0rem, 0.5rem);
@@ -234,51 +248,60 @@ body {
   transform: rotate(45deg) translate(-0.6rem, -0.3rem);
   box-shadow: 0 10px 2px 0 rgba(255, 86, 19, 0.555);
 }
-/* Container 2__________________________________________________*/
+
+/*________________________ Container 2__________________________*/
 
 .container:hover .lineTop2 {
   transform: rotate(45deg) translate(0.5rem, -0.5rem);
   box-shadow: 0 10px rgba(255, 86, 19, 0.555);
 }
+
 .container:hover .lineDown2 {
   transform: rotate(-45deg) translate(0.2rem, -1.2rem);
   box-shadow: 0 10px rgba(255, 86, 19, 0.555);
 }
-/* Container 3__________________________________________________*/
+
+/*_______________________  Container 3_____________________*/
 
 .container.three:hover {
   box-shadow: inset 0 0 0.36rem 0 rgba(238, 175, 150, 0.555),
     inset 0 0 0.75rem 0 rgba(0, 0, 0, 0.9), 0 0 2rem 0 rgba(255, 86, 19, 0.555);
 }
+
 .container.three:hover * {
   box-shadow: inset 0 0 0.36rem 0 rgba(131, 92, 77, 0.658),
     inset 0 0 0.75rem 0 rgba(0, 0, 0, 0.9),
     0 0 1.25rem 0 rgba(255, 86, 19, 0.555);
 }
+
 .container:hover .lineRight3 {
   transform: rotate(59deg) translate(0.7rem, -0.2rem);
 }
+
 .container:hover .lineDown3 {
   transform: rotate(-420deg) translate(-0.1rem, -0.5rem);
 }
+
 .container:hover .lineLeft3 {
   transform: rotate(0deg) translate(0, 0rem);
 }
 
-/* Container 4__________________________________________________*/
+/*_________________________ Container 4______________________*/
+
 .container:hover .lineTop4 {
   transform: translatex(-6px);
   box-shadow: -6px 8px rgba(255, 86, 19, 0.555);
-
   margin-left: 1.5rem;
 }
+
 .container:hover .lineDown4 {
   transform: translate(-10px, 0px);
   background-color: rgba(255, 86, 19, 0.555);
   box-shadow: none;
   margin-left: 0.5rem;
 }
-/* Container 5__________________________________________________*/
+
+/*________________________ Container 5______________________*/
 
 .container.five:hover {
   box-shadow: inset 0 0 0.36rem 0 rgba(238, 175, 150, 0.555),
@@ -288,31 +311,38 @@ body {
 .container.five:hover div {
   box-shadow: 0px 10px rgba(255, 86, 19, 0.555);
 }
+
 .container:hover .TopRight5 {
   transform: rotate(45deg) translate(0.5rem, -0.5rem);
 }
+
 .container:hover .bottomRight5 {
   transform: rotate(135deg) translate(0.1rem, 0.2rem);
 }
+
 .container:hover .bottomLeft5 {
   transform: rotate(315deg) translate(0.2rem, 0.1em);
 }
+
 .container:hover .topLeft5 {
   transform: rotate(224deg) translate(0.6rem, -0.4rem);
 }
 
-/* Seconde row of menus_________________________________________*/
+/*================== Seconde row of menus ===================*/
 
-/* container 1__________________________________________________*/
+/*_______________________ container 1________________________*/
+
 .container.first:hover {
   transform: rotate(-90deg) scale(0.9);
 }
+
 .container.first:hover,
 .container.first:hover * {
   box-shadow: inset 0 0 0.36rem 0 rgba(149, 235, 143, 0.308),
     inset 0 0 0.75rem 0 rgba(0, 0, 0, 0.9),
     0 0 1.25rem 0 rgba(255, 86, 19, 0.555);
 }
+
 .container:hover .sec-row-line-top1,
 .container:hover .sec-row-line-down1 {
   width: 1rem;
@@ -321,24 +351,29 @@ body {
   border: 1px solid rgba(255, 86, 19, 0.74);
   opacity: 0.7;
 }
+
 .container:hover .sec-row-line-top1 {
   border-radius: 1% 90%;
   transform: rotate(300deg);
 }
+
 .container:hover .sec-row-line-mid1 {
   opacity: 0.3;
   transform: translatex(0.5rem);
 }
+
 .container:hover .sec-row-line-down1 {
   border-radius: 90% 1%;
   transform: rotate(-300deg);
 }
 
-/* container 2__________________________________________________*/
+/*_______________________   container 2______________________*/
+
 .container.second:hover {
   padding: 1.5rem;
   background-color: rgba(255, 86, 19, 0.13);
 }
+
 .container.second:hover * {
   width: 1rem;
   height: 1rem;
@@ -350,11 +385,14 @@ body {
     0 0 1.25rem 0 rgba(255, 86, 19, 0.555);
   border-radius: 50%;
 }
-/* Container 3__________________________________________________*/
+
+/*________________________ Container 3_______________________*/
+
 .container.third:hover {
   box-shadow: inset 0 0 0.36rem 0 rgba(149, 235, 143, 0.308),
     inset 0 0 0.75rem 0 rgba(0, 0, 0, 0.9), 0 0 2rem 0 rgba(255, 86, 19, 0.555);
 }
+
 .container.third:hover * {
   box-shadow: inset 0 0 0.36rem 0 rgba(255, 86, 19, 0.555),
     inset 0 0 0.75rem 0 rgba(0, 0, 0, 0.9), 0 0 2rem 0 rgba(255, 86, 19, 0.555);
@@ -363,15 +401,18 @@ body {
 .container:hover .sec-row-line-top3 {
   width: 3rem;
 }
+
 .container:hover .sec-row-line-mid3 {
   box-shadow: inset 0 0 0.36rem 0 rgba(149, 235, 143, 0.308),
     inset 0 0 0.75rem 0 rgba(0, 0, 0, 0.9), 0 0 2rem 0 rgba(255, 86, 19, 0.555);
 }
+
 .container:hover .sec-row-line-bottom3 {
   width: 0.8rem;
 }
 
-/* Container 4__________________________________________________*/
+/*_________________________  Container 4_____________________*/
+
 .container.fourth {
   position: relative;
 }
@@ -399,6 +440,7 @@ body {
   background-size: 400%;
   animation: animate 30s linear infinite;
 }
+
 @keyframes animate {
   0% {
     background-position: 200% 0;
@@ -411,6 +453,7 @@ body {
     background-position: 100% 0;
   }
 }
+
 .container.fourth:hover .sec-row-line-top4,
 .container.fourth:hover .sec-row-line-down4 {
   width: 2rem;
@@ -423,6 +466,7 @@ body {
     inset 0 0 0.75rem 0 rgba(0, 0, 0, 0.9),
     inset 0 0 0.31rem 0 rgba(255, 246, 246, 0.9);
 }
+
 .container.fourth:hover .sec-row-line-top4 {
   animation: rotate 15s linear infinite;
 }
@@ -431,6 +475,7 @@ body {
   animation: reversRotate 15s linear infinite;
   margin-top: -2.1rem;
 }
+
 @keyframes rotate {
   0% {
     transform: scale(0) rotatez(360deg) rotatey(360deg) rotatex(360deg);
@@ -439,6 +484,7 @@ body {
     transform: scale(2.5);
   }
 }
+
 @keyframes reversRotate {
   0% {
     transform: scale(2.5) rotatez(-360deg) rotatey(-360deg) rotatex(-360deg);
@@ -448,124 +494,132 @@ body {
   }
 }
 
-/* Conatainer 5________________________________________________ */
+/*_____________________ Conatainer 5_______________________ */
 
 .container.fifth .hidden {
   opacity: 1;
 }
+
 .container.fifth:hover div {
   width: 2rem;
   height: 2rem;
-  background: transparent;
-  border: 1px solid rgba(255, 86, 19, 0.507);
+  margin-top: -2rem;
   border-radius: 1% 90%;
+  background: transparent;
   transform: rotate(45deg);
+  border: 1px solid rgba(255, 86, 19, 0.507);
   box-shadow: inset 0 0 0.36rem 0 rgba(149, 235, 143, 0.308),
     inset 0 0 0.75rem 0 rgba(0, 0, 0, 0.9),
     0 0 1.25rem 0 rgba(255, 86, 19, 0.555);
-
-  margin-top: -2rem;
   animation: rotatefifth 1s linear infinite;
 }
+
 .container.fifth:hover {
   box-shadow: inset 0 0 0.36rem 0 rgba(149, 235, 143, 0.308),
     inset 0 0 0.75rem 0 rgba(0, 0, 0, 0.9),
     0 0 1.25rem 0 rgba(255, 86, 19, 0.555);
 }
 
-@-webkit-keyframes rotatefifth {
+.container.fifth:hover .hidden {
+  opacity: 0;
+}
+
+@keyframes rotatefifth {
   0% {
     transform: rotate(9000000deg);
   }
 }
 
-.container.fifth:hover .hidden {
-  opacity: 0;
-}
+/*======================= Third row of menus=====================*/
 
-/* Third row of menus_________________________________________*/
-/* container 1__________________________________________________*/
+/*__________________________ container 1_______________________*/
+
 .container.thefirst .hidden {
   opacity: 0;
 }
+
 .container.thefirst:hover {
   padding: 0.3rem;
 }
+
 .container.thefirst:hover div {
   width: 1rem;
   height: 1rem;
-  background-color: transparent;
-  border: 1px solid rgba(255, 86, 19, 0.74);
   opacity: 0.7;
   border-radius: 1% 90%;
   transform: rotate(-45deg);
+  background-color: transparent;
+  border: 1px solid rgba(255, 86, 19, 0.74);
 }
 
-/* container 2______________________________________________ */
-.container.thesecond:hover {
-  background-color: transparent;
+/*__________________________ container 2____________________ */
 
+.container.thesecond:hover {
+  padding: 0;
   opacity: 0.7;
   background: black;
   transform: rotate(1deg);
-  padding: 0;
+  background-color: transparent;
   animation: spin 20s linear infinite;
 }
+
 .container.thesecond:hover .little {
   width: 1.5rem;
   height: 1.5rem;
-
-  background: black;
   padding: 0;
   border-radius: 50%;
+  background: black;
   animation: spin 10s linear infinite;
   box-shadow: inset 0 0.4rem 0.5rem 0 rgba(66, 158, 59, 0.63),
     inset 0.1rem 0.4rem 0.6rem 0 rgba(90, 199, 199, 0.726),
     0 0 1.25rem 0 rgba(255, 86, 19, 0.555),
     0 0 1rem 0 rgba(216, 157, 133, 0.555), 0 0 1rem 0 rgba(186, 219, 110, 0.555);
 }
+
 .container.thesecond:hover div {
   width: 6.4rem;
   height: 6.4rem;
+  border-radius: 50%;
   border: none;
   box-shadow: none;
   background: transparent;
-
-  border-radius: 50%;
 }
+
 @keyframes spin {
   100% {
     transform: rotate(360deg);
   }
 }
 
-/* container 3_______________________________________________________ */
+/*_________________________ container 3__________________________ */
+
 .container.thethird:hover {
-  background-color: transparent;
+  padding: 0;
   opacity: 0.7;
   background: black;
-  padding: 0;
+  background-color: transparent;
   animation: spin2 20s linear infinite;
   box-shadow: inset 0 0 0.5rem 0 rgba(128, 238, 120, 0.534),
     inset 0 0 1rem 0 rgba(0, 0, 0, 0.9), 0 0 1.25rem 0 rgba(255, 86, 19, 0.555),
     0 0 1rem 0 rgba(216, 157, 133, 0.555), 0 0 1rem 0 rgba(186, 219, 110, 0.555);
 }
+
 .container.thethird:hover .earth {
   width: 4rem;
   height: 4rem;
-  background: transparent;
   padding: 0;
   z-index: 1;
-  animation: spin3 20s linear infinite;
   border-radius: 50%;
+  background: transparent;
+  animation: spin3 20s linear infinite;
 }
+
 .container.thethird:hover .moon {
+  padding: 0;
   width: 1.5rem;
   height: 1.5rem;
-  background: black;
-  padding: 0;
-
   border-radius: 50%;
+  background: black;
   animation: spin3 20s linear infinite;
 }
 
@@ -575,17 +629,18 @@ body {
   }
 }
 
-/* container 4______________________________________________ */
+/*_______________________ container 4_______________________ */
+
 .container.theforth:hover {
-  background-color: transparent;
-  /* border: 1px solid rgba(255, 86, 19, 0.74); */
-  border: none;
+  padding: 0;
   opacity: 0.7;
+  border: none;
   background: black;
   transform: rotate(1deg);
-  padding: 0;
+  background-color: transparent;
   animation: spin4 1s linear infinite;
 }
+
 .container.theforth:hover .little {
   width: 0.3rem;
   height: 0.3rem;
@@ -598,22 +653,23 @@ body {
     0 0 1.25rem 0 rgba(255, 86, 19, 0.555),
     0 0 1rem 0 rgba(216, 157, 133, 0.555), 0 0 1rem 0 rgba(186, 219, 110, 0.555);
 }
+
 .container.theforth:hover div {
   width: 4.9rem;
   height: 4.9rem;
   border: none;
   box-shadow: none;
   background: transparent;
-
   border-radius: 50%;
 }
+
 @keyframes spin4 {
   100% {
     transform: rotate(90000deg);
   }
 }
 
-/* container5__________________________________________________ */
+/*___________________________ container 5_______________________ */
 
 .container.thefifth:hover {
   background: repeating-conic-gradient(
@@ -638,221 +694,30 @@ body {
   );
   background-size: 1% 2%;
   transform: rotate(1deg);
-
   box-shadow: inset 0 0 3rem 0 rgb(160, 52, 52), 0 0 2rem 0 rgb(160, 52, 52);
   animation: spin5 10s linear infinite;
-  /* border: none;
-  box-shadow: none; */
 }
 
 @keyframes spin5 {
   0% {
     transform: rotate(90000deg);
-    /* background-size: 100% 100%; */
+    /* background-size: 100% 100%;*/
   }
 }
 
-/* Name of designer_____________________________________________*/
+/*======================== Name of designer ======================*/
+
 .designer {
+  padding-top: 0.2rem;
+  margin-bottom: 2rem;
   background-color: transparent;
   color: rgba(255, 86, 19, 0.555);
   font-family: "Parisienne", cursive;
-  padding-top: 0.2rem;
-  margin-bottom: 2rem;
   transform: translate(-30rem, 30rem);
 }
+
 h2 {
   font-weight: lighter;
   text-align: center;
   text-shadow: 0 0 1.5rem rgb(245, 169, 139);
 }
-
-/* .container.thefifth:hover {
-  background: repeating-conic-gradient(
-    black,
-    black,
-    rgb(181, 221, 116),
-    rgb(160, 52, 52),
-    black,
-    black,
-    rgb(160, 52, 52),
-    rgb(181, 221, 116),
-    black,
-    black,
-    rgb(181, 221, 116),
-    rgb(160, 52, 52),
-    black,
-    black,
-    rgb(160, 52, 52),
-    rgb(181, 221, 116),
-    black,
-    black
-  );
-
-  box-shadow: inset 0 0 1.25rem 0 rgba(255, 86, 19, 0.555),
-    inset 0 0 1rem 0 rgba(216, 157, 133, 0.555),
-    0 0 1.25rem 0 rgba(255, 86, 19, 0.555),
-    0 0 1rem 0 rgba(216, 157, 133, 0.555);
-  background-size: 30% 10%;
-  border-radius: 50%;
-} */
-
-/* ==============
-   Moving Planets
-   ============== */
-/* 
-   .sun,
-   .earthholder,
-   .earth,
-   .moonholder,
-   .moon {
-     border-radius: 50%;
-     position: absolute;
-   }
-   
-   .sun {
-     width: 11.5rem;
-     height: 11.5rem;
-     display: flex;
-     justify-content: center;
-     align-items: center;
-     right: 27rem;
-     top: 10rem;
-     background: linear-gradient(
-       -45deg,
-       rgba(207, 121, 50, 0.63),
-       rgba(196, 194, 95, 0.863),
-       rgba(224, 140, 71, 0.74),
-       rgba(196, 194, 95, 0.863),
-       rgba(199, 116, 68, 0.774),
-       rgba(196, 194, 95, 0.863),
-       white
-     );
-     box-shadow: inset 0 0rem 2rem 0.5rem rgba(199, 81, 52, 0.295),
-       inset 0rem 0rem 2rem 0rem rgba(228, 115, 50, 0.555),
-       0 0rem 2rem 0.5rem rgba(199, 81, 52, 0.295),
-       0rem 0rem 4rem 0rem rgba(228, 115, 50, 0.555);
-     background-size: 400% 400%;
-     animation: background-sun-change 10s ease-in-out infinite;
-     animation-direction: alternate;
-   }
-   
-   @keyframes background-sun-change {
-     from {
-       background-position: 0%;
-     }
-     to {
-       background-position: 100%;
-     }
-   }
-   
-   .earth {
-     width: 4.5rem;
-     height: 4.5rem;
-     padding: 0;
-     z-index: 8;
-     background: repeating-conic-gradient(
-       black,
-       rgba(194, 54, 61, 0.933),
-       black,
-       rgba(203, 215, 241, 0.39),
-       black,
-       rgba(194, 54, 61, 0.933),
-       black,
-       rgba(203, 215, 241, 0.39),
-       black,
-       rgba(194, 54, 61, 0.933),
-       black,
-       rgba(203, 215, 241, 0.39),
-       black
-     );
-     box-shadow: inset 0 0 1rem 0.5rem rgba(194, 73, 79, 0.404),
-       inset 0 0 1rem 0.1rem rgba(192, 70, 76, 0.295),
-       0 0 1.5rem 0.5rem rgba(199, 77, 83, 0.356),
-       0 0 1rem 0.5rem rgba(194, 73, 79, 0.555);
-     animation: rotate-earth 2s linear infinite;
-     animation-direction: alternate;
-     background-size: 30% 20%;
-   }
-   
-   @keyframes rotate-earth {
-     from {
-       transform: rotate(90deg);
-     }
-     to {
-       transform: rotate(0deg);
-     }
-   }
-   
-   .moon {
-     width: 2rem;
-     height: 2rem;
-     padding: 0;
-     margin: 5rem;
-     box-shadow: inset 0 0 0.5rem 0.2rem rgba(161, 161, 161, 0.808),
-       inset 0 0 0.2rem 0 rgba(209, 209, 209, 0.808),
-       0 0 0.5rem 0.2rem rgba(255, 255, 255, 0.445);
-     background: repeating-conic-gradient(
-       rgba(0, 0, 0, 0.986),
-       rgba(0, 0, 0, 0.986),
-       rgba(233, 109, 38, 0.39),
-       rgba(0, 0, 0, 0.986),
-       rgba(255, 255, 255, 0.973)
-     );
-     animation: rotate-moon 20s linear infinite;
-     animation-direction: alternate;
-     background-size: 30% 20%;
-   }
-   
-   @keyframes rotate-moon {
-     from {
-       transform: rotate(90000deg);
-     }
-     to {
-       transform: rotate(0deg);
-     }
-   }
-   
-   .earthholder {
-     width: 23rem;
-     height: 23rem;
-     animation: rotate-Moon-and-earth-Holder 150s linear infinite;
-   }
-   
-   .moonholder {
-     width: 4rem;
-     height: 4rem;
-     animation: rotate-Moon-and-earth-Holder 24s linear infinite;
-   }
-   
-   @keyframes rotate-Moon-and-earth-Holder {
-     0% {
-       transform: rotate(-360deg);
-     }
-   }
-   
-   .moon:hover,
-   .earth:hover {
-     animation: hover-earth 2s linear infinite;
-     animation-direction: alternate;
-   }
-   
-   @keyframes hover-earth {
-     from {
-       background-size: 20% 10%;
-     }
-     to {
-       background-size: 30% 20%;
-     }
-   } */
-
-/* <div class="sun">
-   <div class="earthholder">
-     <div class="earth ">
-      
-     </div>
-     <div class="moonholder">
-       <div class="moon"></div>
-     </div>
-   </div>
- </div> */
