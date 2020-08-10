@@ -1,1 +1,1 @@
-# Colorfull and creative patterns made only with Css
+# Creative patterns made only with Css
